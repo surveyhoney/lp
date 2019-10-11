@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Tue Oct 08 2019 06:53:21 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Fri Oct 11 2019 06:18:35 GMT+0000 (UTC)  -->
 <html data-wf-page="5d63af4118659f16e208e103" data-wf-site="5d551e724d608affcd2cf0c1">
 
 <head>
@@ -881,7 +881,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="form__buttons__login">
-                                                    <a href="https://app.surveyhoney.com/login" class="isolated-link w-inline-block">
+                                                    <a href="https://app.surveyhoney.com/login" class="isolated-link login-sh w-inline-block">
                                                         <div class="button__text">Log in instead</div>
                                                     </a>
                                                 </div>
@@ -898,7 +898,7 @@
                                 <div class="hero-register__connect">
                                     <div class="connect">
                                         <div class="connect__item">
-                                            <a data-w-id="36376866-3c7d-fe6f-3646-e5eaebb30aef" href="https://app.surveyhoney.com/login" class="button button--seconday button--secondary--fb w-inline-block">
+                                            <a data-w-id="36376866-3c7d-fe6f-3646-e5eaebb30aef" href="https://app.surveyhoney.com/login" class="button button--seconday button--secondary--fb login-sh w-inline-block">
                                                 <div class="button__bg button__bg__orange"></div>
                                                 <div class="button__body button__body--secondary"><img src="images/fb-ico-surveyhoney.svg" alt="" class="button__icon">
                                                     <div class="button__text">
@@ -908,7 +908,7 @@
                                             </a>
                                         </div>
                                         <div class="connect__item">
-                                            <a data-w-id="36376866-3c7d-fe6f-3646-e5eaebb30af7" href="https://app.surveyhoney.com/login" class="button button--seconday button--secondary--gg w-inline-block">
+                                            <a data-w-id="36376866-3c7d-fe6f-3646-e5eaebb30af7" href="https://app.surveyhoney.com/login" class="button button--seconday button--secondary--gg login-sh w-inline-block">
                                                 <div class="button__bg button__bg__orange"></div>
                                                 <div class="button__body button__body--secondary"><img src="images/gl-ico-surveyhoney.svg" alt="" class="button__icon">
                                                     <div class="button__text">
@@ -1680,6 +1680,21 @@
     <!--  Google Tag Manager (noscript)  -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8WGGVM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!--  End Google Tag Manager (noscript)  -->
+    <script>
+        // Apped URL paramters to Login URL
+        var original_url = $('.login-sh').attr('href');
+        original_url += '?' + window.location.search.substr(1);
+        $('.login-sh').attr('href', original_url);
+        // Apped URL paramters to Login URL
+        //Append URL paramters to form get action
+        var params = [];
+        var items = window.location.search.substr(1).split("&");
+        for (var index = 0; index < items.length; index++) {
+            params = items[index].split("=");
+            $(".form__input-field").append('<input type="hidden" name="' + params[0] + '" value="' + params[1] + '">');
+        }
+        //Append URL paramters to form get action
+    </script>
 </body>
 
 </html>
