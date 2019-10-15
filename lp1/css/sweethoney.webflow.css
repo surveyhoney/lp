@@ -121,6 +121,7 @@ blockquote {
 
 .container {
   position: relative;
+  display: block;
   width: 100%;
   max-width: 1248px;
   margin-right: auto;
@@ -1757,6 +1758,7 @@ blockquote {
   right: 0%;
   bottom: 0%;
   z-index: 1;
+  display: block;
   background-color: rgba(78, 91, 249, 0.96);
 }
 
@@ -1854,10 +1856,7 @@ blockquote {
   right: 24px;
   bottom: 24px;
   z-index: 999;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
