@@ -1697,10 +1697,13 @@
             $(".form__input-field").append('<input type="hidden" name="' + params[0] + '" value="' + params[1] + '">');
 
             if(params[0] == 'score') {
-                $('#earnings-message').text(params[1])
-                $('#earnings-message-modal').text(params[1])
+                earnings = params[1] * 4
             }
         }
+        
+        $('#earnings-message').text(earnings)
+        $('#earnings-message-modal').text(earnings)
+            
         //Append URL paramters to form get action
 
         // Push GTM Event +  Append utm params to GTM virtual Page view
