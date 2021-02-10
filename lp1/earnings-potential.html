@@ -1696,7 +1696,7 @@
             params = items[index].split("=");
             $(".form__input-field").append('<input type="hidden" name="' + params[0] + '" value="' + params[1] + '">');
 
-            if(params[0] == 'score' && params[0] > 0) {
+            if(params[0] == 'score' && params[1] > 0) {
                 earnings = params[1] > 50 ? 200 : params[1] * 4  
             }
         }
