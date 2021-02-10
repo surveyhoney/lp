@@ -1685,7 +1685,7 @@
 
         // Apped URL paramters to Login URL
         var original_url = $('.login-sh').attr('href');
-        original_url += '?utm_contact=quiz-estimate&' + window.location.search.substr(1);
+        original_url += '?utm_touch=quiz-estimate&' + window.location.search.substr(1);
         $('.login-sh').attr('href', original_url);
         // Apped URL paramters to Login URL
 
@@ -1697,10 +1697,10 @@
             $(".form__input-field").append('<input type="hidden" name="' + params[0] + '" value="' + params[1] + '">');
 
             if(params[0] == 'score') {
-                earnings = params[1] * 4
+                earnings = params[1] * 4 
             }
         }
-        $(".form__input-field").append('<input type="hidden" name="utm_contact" value="quiz-estimate">');
+        $(".form__input-field").append('<input type="hidden" name="utm_touch" value="quiz-estimate">');
 
         $('#earnings-message').text(earnings)
         $('#earnings-message-modal').text(earnings)
