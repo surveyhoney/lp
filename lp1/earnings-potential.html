@@ -1696,8 +1696,8 @@
             params = items[index].split("=");
             $(".form__input-field").append('<input type="hidden" name="' + params[0] + '" value="' + params[1] + '">');
 
-            if(params[0] == 'score') {
-                earnings = params[1] > 50 ? 200 : abs(params[1]) * 4 
+            if(params[0] == 'score' && params[0] > 0) {
+                earnings = params[1] > 50 ? 200 : params[1] * 4  
             }
         }
         $(".form__input-field").append('<input type="hidden" name="utm_touch" value="quiz-estimate">'); 
