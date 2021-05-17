@@ -31,21 +31,6 @@
     </script>
     <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
     <link href="images/webclip.png" rel="apple-touch-icon">
-    <style>
-        /* body {
-            background-image: url("images/earnings-quiz.jpg");
-            background-repeat: repeat-y;
-
-        } */
-        .op-interactive, #og_image_60235db9aa47b754f1b78eb8 {
-            height: 100vh;
-        }
-
-        #og_iframe_60235db9aa47b754f1b78eb8 {
-            min-height: 100vh;
-            height: 100vh;
-        }
-    </style>
     <!--  Google Tag Manager  -->
     <script>
         (function(w, d, s, l, i) {
@@ -68,9 +53,30 @@
 
 <body>
 
-    <div>
-        <div class='op-interactive' id='60235db9aa47b754f1b78eb8' data-title='SurveyHoney earnings potential' data-url='https://surveyhoney.outgrow.us/60235db9aa47b754f1b78eb8?sLead=1' data-surl='https://bit.ly/3tLt55x' data-width='100%'></div>
-        <script src='//dyv6f9ner1ir9.cloudfront.net/assets/js/sloader.js'></script>
+    <style>
+        @media screen and (max-width: 640px) {
+            #og_iframe {
+                height: 100vh;
+                width: 100vw;
+            }
+        }
+
+        @media screen and (min-width: 641px) and (max-width: 1024px) {
+            #og_iframe {
+                height: 100vh;
+                width: 100vw;
+            }
+        }
+
+        @media screen and (min-width: 1025px) {
+            #og_iframe {
+                height: 100vh;
+                width: 100vw;
+            }
+        }
+    </style>
+    <div id='og_iframe' style='-webkit-overflow-scrolling: touch; overflow: auto;'>
+        <iframe title="SurveyHoney earnings potential" id="og_iframe_content" src='' style='border: none; overflow: hidden; width:100%; height: 100vh;' scrolling='yes'></iframe>
     </div>
 
 
@@ -83,10 +89,9 @@
 
     <script>
         var queryString = window.location.search.substr(1)
-        var actual_url = $('#60235db9aa47b754f1b78eb8').attr('data-url');
-        var url = actual_url + '&' + queryString
-        $('#60235db9aa47b754f1b78eb8').attr('data-url', url);
-        initIframe('60235db9aa47b754f1b78eb8');
+
+        var url = 'https://surveyhoney.outgrow.us/60235db9aa47b754f1b78eb8?' + queryString
+        $('#og_iframe_content').attr('src', url);
     </script>
     <script>
         // Push GTM Event +  Append utm params to GTM virtual Page view
